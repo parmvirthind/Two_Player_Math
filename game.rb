@@ -11,12 +11,19 @@ class Game
     @current_question = Question.new
     @current_turn = Turn.new(@current_player, @current_question)
 
+    @current_turn.ask_question
+    @current_turn.check
+    swapUser
+    puts @current_player.name
 
   end
 
-  def run_turn
-    @current_turn.ask_question
-    @current_turn.check
+  def swapUser
+    if @current_player = @players[0]
+      @current_player = @players[1]
+    else
+      @current_player = @players[0]
+    end
   end
 
 end

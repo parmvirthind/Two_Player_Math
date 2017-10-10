@@ -21,4 +21,8 @@ class Turn
     end
   end
 
+  def swap_player
+    if @current_player == 
+  end
+
 end
