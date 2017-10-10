@@ -10,13 +10,15 @@ class Game
     @current_player = @players[0]
 
     while @players[0].lives > 0 && @players[1].lives > 0 do
-      puts "*_.-._* NEW TURN *_.-._*"
+      puts "._.-._* NEW TURN *_.-._."
       @current_question = Question.new
       @current_turn = Turn.new(@current_player, @current_question)
       @current_turn.ask_question
       @current_turn.check
       swapUser
-      puts "#{@players[0].name}: #{@players[0].lives}/3 vs. #{@players[1].name}: #{@players[1].lives}/3 "
+      puts "*********** SCOREBOARD: ***********"
+      puts "* #{@players[0].name}: #{@players[0].lives}/3 vs. #{@players[1].name}: #{@players[1].lives}/3 *"
+      puts "***********************************"
     end
 
     puts "xxxxxxxxx GAME OVER xxxxxxxxx"
