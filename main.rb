@@ -5,6 +5,3 @@ require './questions'
 require './turn'
 
 @game = Game.new
-
-# @game.run_turn
-# @game.run_turn
